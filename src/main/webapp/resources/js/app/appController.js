@@ -21,8 +21,7 @@ app.controller('appController', function($scope, appService) {
 			self.notification = data;
 		},
 		function(data){
-			debugger
-			self.leading = false;
+			self.loading = false;
 			self.notification = "Fail on connection with the server, try again please."+data;
 		});
 	};

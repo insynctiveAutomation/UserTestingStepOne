@@ -29,11 +29,14 @@
 </head>
 
 <body data-ng-controller="appController as appCtrl">
-	<img alt="loading" src="${pageContext.request.contextPath}/resources/gif/loader.gif" ng-if="appCtrl.loading"><br/>
+	<div ng-if="appCtrl.loading">
+		<img alt="loading" src="${pageContext.request.contextPath}/resources/gif/loader.gif" ng-if="appCtrl.loading">
+		<span> We are creating your account...</span><br/>
+	</div>
 	<form ng-submit="appCtrl.createPerson()" class="form-signin" name="sendTest">
 		<div ng-if="!appCtrl.started">
 			<input placeholder="Enter your Name" type="text" ng-model="appCtrl.name"></input>
-			<input placeholder="Enter your Lastname" type="text" ng-model="appCtrl.lastname"></input>
+			<input placeholder="Enter your Last Name" type="text" ng-model="appCtrl.lastname"></input>
 			<input placeholder="Enter your Email" type="text" ng-model="appCtrl.email"></input>
 			<button ng-disabled="" class="" type="submit">Create Person</button>
 		</div>
