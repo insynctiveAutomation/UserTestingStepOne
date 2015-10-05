@@ -1,8 +1,8 @@
 'use strict';
 
-var app = angular.module('app', [ 'ngAnimate']);
+var app = angular.module('app', [ 'ngAnimate', 'ngCookies']);
 
-app.controller('appController', function($scope, appService) {
+app.controller('appController', function($cookies, $scope, $window, appService) {
 	
 	var self = this;
 	this.started = false;
@@ -17,8 +17,11 @@ app.controller('appController', function($scope, appService) {
 		self.started = true;
 		self.loading = true;
 		appService.createPerson({name : self.name, lastName : self.lastname, email : self.email}, function(data) {
-			self.loading = false;
-			self.notification = data;
+//			self.loading = false;
+//			self.notification = data;
+			$cookies.put('name', self.name+' '+self.lastname);
+			$cookies.put('email', self.email);
+			$window.location.href = '/confirmationPage';
 		},
 		function(data){
 			self.loading = false;

@@ -16,4 +16,11 @@ public class AppController {
 		model.setViewName("index");
 		return model;
 	}
+	
+	@RequestMapping(value = "/confirmationPage" ,method = RequestMethod.GET)
+	public ModelAndView confirmationPage(){
+		ModelAndView model = new ModelAndView();
+		model.setViewName("confirmationPage");
+		return model;
+	}
 }

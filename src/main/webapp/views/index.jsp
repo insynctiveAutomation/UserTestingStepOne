@@ -35,10 +35,11 @@
 	</div>
 	<form ng-submit="appCtrl.createPerson()" class="form-signin" name="sendTest">
 		<div ng-if="!appCtrl.started">
-			<input placeholder="Enter your Name" type="text" ng-model="appCtrl.name"></input>
+			<h4>In order to start testing you need to register so we can send you an email invitation with first login instructions. Enter your First name, Last Name (Fake or real) and a valid email address and wait for the invitation to reach the provided email address</h4>
+			<input placeholder="Enter your First Name" type="text" ng-model="appCtrl.name"></input>
 			<input placeholder="Enter your Last Name" type="text" ng-model="appCtrl.lastname"></input>
 			<input placeholder="Enter your Email" type="text" ng-model="appCtrl.email"></input>
-			<button ng-disabled="" class="" type="submit">Create Person</button>
+			<button ng-disabled="" class="" type="submit">Submit</button>
 		</div>
 		<div>
 			<span>{{appCtrl.notification}}</span>
