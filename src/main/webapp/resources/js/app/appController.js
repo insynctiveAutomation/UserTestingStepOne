@@ -2,7 +2,7 @@
 
 var app = angular.module('app', [ 'ngAnimate', 'ngCookies']);
 
-app.controller('appController', function($cookies, $scope, $window, appService) {
+app.controller('appController', function($cookies, $scope, $window, $interval, appService) {
 	
 	var self = this;
 	this.started = false;
@@ -11,6 +11,8 @@ app.controller('appController', function($cookies, $scope, $window, appService) 
 	this.name = '';
 	this.lastname = '';
 	this.notification = '';
+	this.tlaIndex;
+	$cookies.remove('tlaIndex')
 	
 	/*On Create Person*/
 	this.createPerson = function() {
@@ -21,6 +23,7 @@ app.controller('appController', function($cookies, $scope, $window, appService) 
 //			self.notification = data;
 			$cookies.put('name', self.name+' '+self.lastname);
 			$cookies.put('email', self.email);
+			$cookies.put('tlaIndex', data.index);
 			$window.location.href = '/confirmationPage';
 		},
 		function(data){
@@ -28,4 +31,5 @@ app.controller('appController', function($cookies, $scope, $window, appService) 
 			self.notification = "Fail on connection with the server, try again please."+data;
 		});
 	};
+
 });
