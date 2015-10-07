@@ -57,7 +57,8 @@
                                         </div>
                                     </div>
                                     <div class="col s8 offset-s2">
-                                        <span>{{appCtrl.notification}}</span>
+                                       <h3>{{appCtrl.notification}}</h3>
+                                       {{appCtrl.failData}}
                                     </div>
                                 </form>
                             </div>

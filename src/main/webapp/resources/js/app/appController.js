@@ -12,6 +12,7 @@ app.controller('appController', function($cookies, $scope, $window, $interval, a
 	this.lastname = '';
 	this.notification = '';
 	this.tlaIndex;
+	this.failData;
 	$cookies.remove('tlaIndex')
 	
 	/*On Create Person*/
@@ -26,7 +27,8 @@ app.controller('appController', function($cookies, $scope, $window, $interval, a
 		},
 		function(data){
 			self.loading = false;
-			self.notification = "Fail on connection with the server, try again please."+data;
+			self.notification = "Fail on connection with the server, try again please.";
+			self.failData = data;
 		});
 	};
 
