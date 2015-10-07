@@ -19,12 +19,10 @@ app.controller('appController', function($cookies, $scope, $window, $interval, a
 		self.started = true;
 		self.loading = true;
 		appService.createPerson({name : self.name, lastName : self.lastname, email : self.email}, function(data) {
-//			self.loading = false;
-//			self.notification = data;
 			$cookies.put('name', self.name+' '+self.lastname);
 			$cookies.put('email', self.email);
 			$cookies.put('tlaIndex', data.index);
-			$window.location.href = '/confirmationPage';
+			$window.location.href = 'confirmationPage';
 		},
 		function(data){
 			self.loading = false;
