@@ -48,7 +48,7 @@
                                     <input placeholder="Enter your Last Name" type="text" ng-model="appCtrl.lastname"></input>
                                 </div>
                                 <div class="col s12">
-                                    <input placeholder="Enter your Email" type="text" ng-model="appCtrl.email"></input>
+                                    <input placeholder="Enter your Email" type="email" ng-model="appCtrl.email"></input>
                                 </div>
                                 <div class="col s6 offset-s3">
                                     <button ng-disabled="" class="" type="submit">Submit</button>
