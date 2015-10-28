@@ -13,7 +13,21 @@ public class AppController {
 	@RequestMapping(value = "/" ,method = RequestMethod.GET)
 	public ModelAndView root(){
 		ModelAndView model = new ModelAndView();
-		model.setViewName("index");
+		model.setViewName("home");
+		return model;
+	}
+	
+	@RequestMapping(value = "/openenrollment" ,method = RequestMethod.GET)
+	public ModelAndView openEnrollment(){
+		ModelAndView model = new ModelAndView();
+		model.setViewName("index_oe");
+		return model;
+	}
+	
+	@RequestMapping(value = "/onboarding" ,method = RequestMethod.GET)
+	public ModelAndView onBoarding(){
+		ModelAndView model = new ModelAndView();
+		model.setViewName("index_ob");
 		return model;
 	}
 	

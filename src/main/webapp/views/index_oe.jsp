@@ -18,9 +18,9 @@
         <script type="text/javascript" src="${pageContext.request.contextPath}/resources/node_modules/angular-ui-bootstrap/ui-bootstrap-tpls.js"></script>
         <!-- My CSS -->
         <!-- My Angular App  -->
-        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/app/appController.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/app/appService.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/app/appDirectives.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/app_oe/appController.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/app_oe/appService.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/app_oe/appDirectives.js"></script>
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
         <!-- Compiled and minified JavaScript -->
